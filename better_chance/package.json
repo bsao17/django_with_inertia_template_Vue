@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "prod": "vite build"
+  },
+  "dependencies": {
+    "vite": "^4.4.9"
+  }
+}
