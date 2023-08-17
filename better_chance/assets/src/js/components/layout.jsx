@@ -8,4 +8,4 @@ const Layout = ({children}) => (
 
 
 
-export default page => <Layout>{page}</Layout>;
+export default Layout => <Layout>{page}</Layout>;
