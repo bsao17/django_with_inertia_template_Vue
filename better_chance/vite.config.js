@@ -2,7 +2,7 @@ import {resolve} from "path"
 
 module.exports = {
   plugins: [],
-  root: resolve('./assets'),
+  root: resolve('./assets/dist'),
   base: '/assets/',
   server: {
     host: 'localhost',
@@ -24,7 +24,7 @@ module.exports = {
     target: 'es2015',
     rollupOptions: {
       input: {
-        main: resolve('./assets/src/js/main'),
+        main: resolve('./assets/dist/js/main.jsx'),
       },
       output: {
         chunkFileNames: undefined,

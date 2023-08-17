@@ -2,14 +2,12 @@ import React from 'react'
 import { render } from 'react-dom'
 import { createInertiaApp } from '@inertiajs/inertia-react'
 import { InertiaProgress } from '@inertiajs/progress';
-import axios from 'axios';
-import Layout from 'assets/src/js/components/Layout.jsx';
+//import axios from 'axios';
+import Layout from './components/Layout';
 import '../css/style.css';
 
 
 const pages = import.meta.glob('./pages/**/*.jsx')
-
-console.log(pages)
 
 document.addEventListener('DOMContentLoaded', () => {
   //const csrfToken = document.querySelector('meta[name=csrf-token]').content;
