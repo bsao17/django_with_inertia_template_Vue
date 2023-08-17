@@ -1,9 +1,9 @@
-const { resolve } = require('path');
+import {resolve} from "path"
 
 module.exports = {
   plugins: [],
-  root: resolve('./assets/src'),
-  base: '/static/',
+  root: resolve('./assets'),
+  base: '/assets/',
   server: {
     host: 'localhost',
     port: 3000,
