@@ -3,7 +3,7 @@ import { render } from 'react-dom'
 import { createInertiaApp } from '@inertiajs/inertia-react'
 import { InertiaProgress } from '@inertiajs/progress';
 //import axios from 'axios';
-import Layout from './components/Layout';
+import Layout from './components/Layout.jsx';
 import '../css/style.css';
 
 
