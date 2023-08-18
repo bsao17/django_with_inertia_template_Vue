@@ -1,7 +1,13 @@
 import {resolve} from "path"
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
 
 module.exports = {
-  plugins: [],
+  plugins: [
+    react({
+        include:    '**/*.disabled'
+    })
+  ],
   root: resolve('./assets/dist'),
   base: '/assets/',
   server: {
