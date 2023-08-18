@@ -1,5 +1,4 @@
-import React from 'react'
-import { render } from 'react-dom'
+import { createRoot } from 'react-dom/client';
 import { createInertiaApp } from '@inertiajs/inertia-react'
 import { InertiaProgress } from '@inertiajs/progress';
 import axios from 'axios';
@@ -7,9 +6,10 @@ import Layout from './components/Layout.jsx';
 import '../css/style.css';
 
 
-const pages = import.meta.glob('/pages/**/*.jsx')
+const pages = import.meta.glob('/js/**/*.jsx')
 
 console.log("welcome on main.jsx page !")
+console.log(pages)
 
 document.addEventListener('DOMContentLoaded', () => {
   //const csrfToken = document.querySelector('meta[name=csrf-token]').content;
@@ -20,13 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   createInertiaApp({
     resolve: async name => {
-      const page = (await pages[`/pages/${name}.jsx`]()).default;
+      const page = (await pages[`./pages/${name}.jsx`]()).default;
       page.layout = page.layout || Layout
 
       return page
     },
     setup({ el, App, props }) {
-      render(<App {...props} />, el)
+      createRoot(el).render(<App {...props} />)
     },
   })
 });

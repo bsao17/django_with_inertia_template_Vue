@@ -1,7 +1,11 @@
 from inertia import render
 
 
-def index(request):
-    return render(request, 'Events/index', props={
+def home(request):
+    return render(request, 'main', props={
         'events': ["better chance number", "explanation concept"]
     })
+
+
+def index(request):
+    return render(request, 'index')
